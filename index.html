@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="성욱아 언제오냐" />
+    <meta name="og:title" content="성욱아 언제오냐" />
     <meta name="og:description" content="성욱아 언제오냐" />
     <title>성욱아 언제오냐</title>
     <style>
@@ -17,8 +18,22 @@
     </style>
   </head>
   <body>
-    <div class="root">
-      <h1>성욱아 언제오냐</h1>
-    </div>
+    <div id="root" class="root"></div>
+    <script>
+      var root = document.getElementById("root");
+      var el = document.createElement("h1");
+      var currentDate = new Date();
+      var currentDateText =
+        currentDate.getFullYear() +
+        "년 " +
+        (currentDate.getMonth() + 1) +
+        "월 " +
+        currentDate.getDate() +
+        "일";
+
+      el.innerText = "성욱아 오늘 " + currentDateText + "인데 언제오냐";
+
+      root.appendChild(el);
+    </script>
   </body>
 </html>
